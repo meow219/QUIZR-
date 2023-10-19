@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+    int length, breadth;
+
+    // Input
+    std::cin >> length >> breadth;
+
+    // Calculate the perimeter (required length of rope)
+    int perimeter = 2 * (length + breadth);
+
+    // Calculate the area (required area of carpet)
+    int area = length * breadth;
+
+    // Output
+    std::cout << "Required length is " << perimeter << " m" << std::endl;
+    std::cout << "Required area of carpet is " << area << " sqm" << std::endl;
+
+    return 0;
+}

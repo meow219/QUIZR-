@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    int x, y;
+   
+    std::cin >> x >> y;
+
+
+    int x1 = 3;
+    int y1 = 4;
+
+    
+    double distance = std::sqrt(std::pow(x - x1, 2) + std::pow(y - y1, 2));
+
+ 
+    int hops = static_cast<int>(std::round(distance));
+
+    std::cout << hops << std::endl;
+
+    return 0;
+}

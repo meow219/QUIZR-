@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main() {
+    int rows, columns, tree_number;
+
+    // Input
+    std::cin >> rows >> columns >> tree_number;
+
+    // Check if the tree number is in the second column from both the first and last columns
+    if ((tree_number % columns == 2) || (tree_number % columns == columns - 1))
+        std::cout << "It is not an orange tree" << std::endl;
+    else
+        std::cout << "It is an orange tree" << std::endl;
+
+    return 0;
+}

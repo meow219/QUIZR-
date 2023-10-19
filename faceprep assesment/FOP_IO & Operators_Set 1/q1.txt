@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    int temperature, wind_velocity;
+
+
+    std::cin >> temperature >> wind_velocity;
+
+    double wind_chill_factor = 35.74 + 0.6215 * temperature - 35.75 * pow(wind_velocity, 0.16) + 0.4275 * temperature * pow(wind_velocity, 0.16);
+
+
+    wind_chill_factor = std::round(wind_chill_factor * 100) / 100;
+
+
+    std::cout << std::fixed << std::setprecision(2) << wind_chill_factor << std::endl;
+
+    return 0;
+}

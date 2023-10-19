@@ -1,0 +1,26 @@
+#include <iostream>
+
+int main() {
+    int unitsConsumed;
+
+    // Input
+    std::cin >> unitsConsumed;
+
+    // Calculate the electricity bill based on the given conditions
+    int electricityBill;
+
+    if (unitsConsumed <= 200) {
+        electricityBill = unitsConsumed * 0.5;
+    } else if (unitsConsumed <= 400) {
+        electricityBill = 100 + (unitsConsumed - 200) * 0.65;
+    } else if (unitsConsumed <= 600) {
+        electricityBill = 100 + 200 + (unitsConsumed - 400) * 0.80;
+    } else {
+        electricityBill = 100 + 200 + 160 + (unitsConsumed - 600) * 1.25;
+    }
+
+    // Output
+    std::cout << "Rs." << electricityBill << std::endl;
+
+    return 0;
+}
